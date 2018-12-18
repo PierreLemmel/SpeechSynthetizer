@@ -1,14 +1,14 @@
 ﻿using CommandLine;
+using FluentValidation;
 using System;
-using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
-using System.Linq;
 using System.Speech.Synthesis;
-using System.Threading.Tasks;
+using Troikatorz.Speech.Core;
 using Troikatorz.Speech.Settings;
+using Troikatorz.Speech.Synthezis;
+using Troikatorz.Speech.Validation;
 
-namespace Troikatorz.Speech
+namespace Troikatorz.Speech.CommandLine
 {
     public static class Program
     {
@@ -28,39 +28,23 @@ namespace Troikatorz.Speech
             }
         }
 
-        private static void RunProgram(Options settings)
+        private static void RunProgram(Options options)
         {
-            SpeechSynthesizer synthetizer = new SpeechSynthesizer()
-            {
-                Volume = settings.Volume,
-                Rate = settings.Rate,
-            };
+            IMapper<Options, SpeechSettings> settingsMapper = new SettingsMapper();
+            SpeechSettings settings = settingsMapper.Map(options);
 
-            string text = GetText(settings);
 
-            if (settings.Output == SpeechOutput.Speaker)
-            {
-                synthetizer.Speak(text);
-            }
-            else if (settings.Output == SpeechOutput.File)
-            {
-                synthetizer.SetOutputToWaveFile(settings.OutputFile);
-                synthetizer.Speak(text);
-                synthetizer.SetOutputToDefaultAudioDevice();
-            }
-            else
-                throw new Exception($"Unexpected output type: {settings.Output}");
+            Synthesizer synthesizer = BootstrapSynthesizer();
         }
 
-        private static string GetText(Options settings)
+        private static Synthesizer BootstrapSynthesizer()
         {
-            if (!string.IsNullOrWhiteSpace(settings.InputText))
-                return settings.InputText;
-            else
-            {
-                string text = File.ReadAllText(settings.InputFile);
-                return text;
-            }
+            IValidator<SpeechSettings> validator = new SpeechSettingsValidator();
+            SpeechSynthesizer systemSynthesizer = new SpeechSynthesizer();
+
+            Synthesizer result = new Synthesizer(validator, systemSynthesizer);
+
+            return result;
         }
     }
 }

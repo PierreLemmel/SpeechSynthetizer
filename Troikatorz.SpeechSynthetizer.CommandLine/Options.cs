@@ -1,6 +1,7 @@
 ﻿using CommandLine;
+using Troikatorz.Speech.Settings;
 
-namespace Troikatorz.Speech.Settings
+namespace Troikatorz.Speech.CommandLine
 {
     internal class Options
     {

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Troikatorz.Speech.Settings;
+﻿using Troikatorz.Speech.Settings;
 
 namespace Troikatorz.Speech.Builders
 {
@@ -66,6 +61,12 @@ namespace Troikatorz.Speech.Builders
             this.outputFile = outputFile;
             return this;
         }
+
+        public SpeechSettingsBuilder WithoutInputText() => WithInputText(null);
+        public SpeechSettingsBuilder WithoutInputFile() => WithInputFile(null);
+        public SpeechSettingsBuilder WithoutOutputFile() => WithOutputFile(null);
+        public SpeechSettingsBuilder WithFileOutput() => WithOutput(SpeechOutput.File);
+        public SpeechSettingsBuilder WithSpeakerOutput() => WithOutput(SpeechOutput.Speaker);
 
         public override SpeechSettings Build() => new SpeechSettings(volume, rate, output, inputText, inputFile, outputFile);
     }
