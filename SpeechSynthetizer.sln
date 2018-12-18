@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Troikartorz.SpeechSynthetizer", "Troikartorz.SpeechSynthetizer\Troikartorz.SpeechSynthetizer.csproj", "{BA3BFE80-89E7-464F-BE74-A25A8490EE93}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Troikatorz.Speech.CommandLine", "Troikatorz.SpeechSynthetizer.CommandLine\Troikatorz.Speech.CommandLine.csproj", "{4F7EDDE5-8B39-413A-8DAF-7088D195F6BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Troikatorz.Speech", "Troikatorz.Speech\Troikatorz.Speech.csproj", "{DBDD4B0E-E90B-4F6C-9086-D55C8B918393}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Core", "01 - Core", "{6A334815-A428-4E4A-9C78-475C3255052E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Tests", "02 - Tests", "{4D1DBBAB-B952-4D20-8747-B6BD588F5BEA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Clients", "03 - Clients", "{EC2312B1-FA1E-4882-924B-9E88C6FBB167}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Troikatorz.Speech.Tests", "Troikatorz.Speech.Tests\Troikatorz.Speech.Tests.csproj", "{4334A941-188C-4C1C-ACA5-12E9E01A76CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +21,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BA3BFE80-89E7-464F-BE74-A25A8490EE93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BA3BFE80-89E7-464F-BE74-A25A8490EE93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BA3BFE80-89E7-464F-BE74-A25A8490EE93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BA3BFE80-89E7-464F-BE74-A25A8490EE93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F7EDDE5-8B39-413A-8DAF-7088D195F6BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F7EDDE5-8B39-413A-8DAF-7088D195F6BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F7EDDE5-8B39-413A-8DAF-7088D195F6BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F7EDDE5-8B39-413A-8DAF-7088D195F6BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBDD4B0E-E90B-4F6C-9086-D55C8B918393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBDD4B0E-E90B-4F6C-9086-D55C8B918393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBDD4B0E-E90B-4F6C-9086-D55C8B918393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBDD4B0E-E90B-4F6C-9086-D55C8B918393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4334A941-188C-4C1C-ACA5-12E9E01A76CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4334A941-188C-4C1C-ACA5-12E9E01A76CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4334A941-188C-4C1C-ACA5-12E9E01A76CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4334A941-188C-4C1C-ACA5-12E9E01A76CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4F7EDDE5-8B39-413A-8DAF-7088D195F6BA} = {EC2312B1-FA1E-4882-924B-9E88C6FBB167}
+		{DBDD4B0E-E90B-4F6C-9086-D55C8B918393} = {6A334815-A428-4E4A-9C78-475C3255052E}
+		{4334A941-188C-4C1C-ACA5-12E9E01A76CC} = {4D1DBBAB-B952-4D20-8747-B6BD588F5BEA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A03E2701-DDEF-4F5F-9F6B-E0FFC6D09933}

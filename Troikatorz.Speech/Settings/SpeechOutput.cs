@@ -1,6 +1,6 @@
-﻿namespace Troikatorz.Speech
+﻿namespace Troikatorz.Speech.Settings
 {
-    internal enum SpeechOutput
+    public enum SpeechOutput
     {
         None = 0,
         Speaker = 1,

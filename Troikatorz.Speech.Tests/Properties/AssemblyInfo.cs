@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Troikartorz.SpeechSynthetizer")]
+[assembly: AssemblyTitle("Troikatorz.Speech.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Troikartorz.SpeechSynthetizer")]
+[assembly: AssemblyProduct("Troikatorz.Speech.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ba3bfe80-89e7-464f-be74-a25a8490ee93")]
+[assembly: Guid("4334a941-188c-4c1c-aca5-12e9e01a76cc")]
 
 // Version information for an assembly consists of the following four values:
 //
