@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Troikatorz.Speech.CommandLine", "Troikatorz.SpeechSynthetizer.CommandLine\Troikatorz.Speech.CommandLine.csproj", "{4F7EDDE5-8B39-413A-8DAF-7088D195F6BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Troikatorz.Speech", "Troikatorz.Speech\Troikatorz.Speech.csproj", "{DBDD4B0E-E90B-4F6C-9086-D55C8B918393}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Troikatorz.Speech.Core", "Troikatorz.Speech\Troikatorz.Speech.Core.csproj", "{DBDD4B0E-E90B-4F6C-9086-D55C8B918393}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Core", "01 - Core", "{6A334815-A428-4E4A-9C78-475C3255052E}"
 EndProject
@@ -14,6 +14,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Clients", "03 - Clients", "{EC2312B1-FA1E-4882-924B-9E88C6FBB167}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Troikatorz.Speech.Tests", "Troikatorz.Speech.Tests\Troikatorz.Speech.Tests.csproj", "{4334A941-188C-4C1C-ACA5-12E9E01A76CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Troikatorz.Speech.GUI", "Troikatorz.Speech.GUI\Troikatorz.Speech.GUI.csproj", "{FD516A40-9B40-43BF-8D86-454DB594BE01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Troikatorz.Speech.Logic", "Troikatorz.Speech.Logic\Troikatorz.Speech.Logic.csproj", "{294B1178-2BFF-477B-B125-0A383199077F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Troikatorz.Speech.Data", "Troikatorz.Speech.Data\Troikatorz.Speech.Data.csproj", "{3F4626E1-28E4-4C1E-85C3-FD60ED9236BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Troikatorz.Speech.GUI.Tests", "Troikatorz.Speech.GUI.Tests\Troikatorz.Speech.GUI.Tests.csproj", "{D07719F8-8F64-4C02-AF21-AB91BB26DFF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +41,22 @@ Global
 		{4334A941-188C-4C1C-ACA5-12E9E01A76CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4334A941-188C-4C1C-ACA5-12E9E01A76CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4334A941-188C-4C1C-ACA5-12E9E01A76CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD516A40-9B40-43BF-8D86-454DB594BE01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD516A40-9B40-43BF-8D86-454DB594BE01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD516A40-9B40-43BF-8D86-454DB594BE01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD516A40-9B40-43BF-8D86-454DB594BE01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{294B1178-2BFF-477B-B125-0A383199077F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{294B1178-2BFF-477B-B125-0A383199077F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{294B1178-2BFF-477B-B125-0A383199077F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{294B1178-2BFF-477B-B125-0A383199077F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F4626E1-28E4-4C1E-85C3-FD60ED9236BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F4626E1-28E4-4C1E-85C3-FD60ED9236BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F4626E1-28E4-4C1E-85C3-FD60ED9236BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F4626E1-28E4-4C1E-85C3-FD60ED9236BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D07719F8-8F64-4C02-AF21-AB91BB26DFF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D07719F8-8F64-4C02-AF21-AB91BB26DFF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D07719F8-8F64-4C02-AF21-AB91BB26DFF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D07719F8-8F64-4C02-AF21-AB91BB26DFF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +65,10 @@ Global
 		{4F7EDDE5-8B39-413A-8DAF-7088D195F6BA} = {EC2312B1-FA1E-4882-924B-9E88C6FBB167}
 		{DBDD4B0E-E90B-4F6C-9086-D55C8B918393} = {6A334815-A428-4E4A-9C78-475C3255052E}
 		{4334A941-188C-4C1C-ACA5-12E9E01A76CC} = {4D1DBBAB-B952-4D20-8747-B6BD588F5BEA}
+		{FD516A40-9B40-43BF-8D86-454DB594BE01} = {EC2312B1-FA1E-4882-924B-9E88C6FBB167}
+		{294B1178-2BFF-477B-B125-0A383199077F} = {6A334815-A428-4E4A-9C78-475C3255052E}
+		{3F4626E1-28E4-4C1E-85C3-FD60ED9236BE} = {6A334815-A428-4E4A-9C78-475C3255052E}
+		{D07719F8-8F64-4C02-AF21-AB91BB26DFF0} = {4D1DBBAB-B952-4D20-8747-B6BD588F5BEA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A03E2701-DDEF-4F5F-9F6B-E0FFC6D09933}

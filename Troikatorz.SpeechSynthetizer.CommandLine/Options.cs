@@ -1,5 +1,6 @@
 ﻿using CommandLine;
 using Troikatorz.Speech.Settings;
+using Troikatorz.SpeechSynthetizerS;
 
 namespace Troikatorz.Speech.CommandLine
 {
@@ -11,8 +12,8 @@ namespace Troikatorz.Speech.CommandLine
         [Option('r', "rate", Default = 0)]
         public int Rate { get; set; }
 
-        [Option('o', "output", Default = SpeechOutput.Speaker)]
-        public SpeechOutput Output { get; set; }
+        [Option('o', "output", Default = OutputType.speaker)]
+        public OutputType Output { get; set; }
 
         [Option('t', "input-text")]
         public string InputText { get; set; }

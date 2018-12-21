@@ -6,6 +6,6 @@ namespace Troikatorz.Speech.CommandLine
     internal class SettingsMapper : IMapper<Options, SpeechSettings>
     {
         public SpeechSettings Map(Options source)
-            => new SpeechSettings(source.Volume, source.Rate, source.Output, source.InputText, source.InputFile, source.OutputFile);
+            => new SpeechSettings(source.Volume, source.Rate, (SpeechOutput)source.Output, source.InputText, source.InputFile, source.OutputFile);
     }
 }

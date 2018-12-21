@@ -22,10 +22,15 @@ namespace Troikatorz.Speech.CommandLine
             }
             catch (Exception ex)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"{ex.GetType().Name}: {ex.Message}");
-                Console.ResetColor();
+                PrintError($"{ex.GetType().Name}: {ex.Message}");
             }
+        }
+
+        private static void PrintError(string message)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(message);
+            Console.ResetColor();
         }
 
         private static void RunProgram(Options options)
@@ -33,8 +38,8 @@ namespace Troikatorz.Speech.CommandLine
             IMapper<Options, SpeechSettings> settingsMapper = new SettingsMapper();
             SpeechSettings settings = settingsMapper.Map(options);
 
-
             Synthesizer synthesizer = BootstrapSynthesizer();
+            synthesizer.Synthetize(settings);
         }
 
         private static Synthesizer BootstrapSynthesizer()
