@@ -14,6 +14,7 @@ namespace Troikatorz.Speech.GUI
                 this.executeDelegate = obj => execute((T)obj);
 
             if (when != null)
+                this.whenDelegate = obj => when((T)obj);
         }
 
         private readonly EventHandler canExecuteChangedHandler;
