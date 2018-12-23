@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -55,11 +56,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Command\Command.cs" />
+    <Compile Include="Core\Command.cs" />
     <Compile Include="InternalsVisibleToTestAssembly.cs" />
     <Compile Include="UserControl\SoundButton.xaml.cs">
       <DependentUpon>SoundButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Core\ViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -104,6 +106,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Command\" />
     <Folder Include="Page\" />
     <Folder Include="ViewModel\" />
   </ItemGroup>

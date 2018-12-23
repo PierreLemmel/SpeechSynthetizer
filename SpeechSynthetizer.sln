@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Troikatorz.Speech.Data", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Troikatorz.Speech.GUI.Tests", "Troikatorz.Speech.GUI.Tests\Troikatorz.Speech.GUI.Tests.csproj", "{D07719F8-8F64-4C02-AF21-AB91BB26DFF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Troikatorz.Speech.Tests.Shared", "Troikatorz.Speech.Tests.Shared\Troikatorz.Speech.Tests.Shared.csproj", "{A42A2F1F-D69D-4566-9E27-5FC3A4686A3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{D07719F8-8F64-4C02-AF21-AB91BB26DFF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D07719F8-8F64-4C02-AF21-AB91BB26DFF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D07719F8-8F64-4C02-AF21-AB91BB26DFF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A42A2F1F-D69D-4566-9E27-5FC3A4686A3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A42A2F1F-D69D-4566-9E27-5FC3A4686A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A42A2F1F-D69D-4566-9E27-5FC3A4686A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A42A2F1F-D69D-4566-9E27-5FC3A4686A3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +75,7 @@ Global
 		{294B1178-2BFF-477B-B125-0A383199077F} = {6A334815-A428-4E4A-9C78-475C3255052E}
 		{3F4626E1-28E4-4C1E-85C3-FD60ED9236BE} = {6A334815-A428-4E4A-9C78-475C3255052E}
 		{D07719F8-8F64-4C02-AF21-AB91BB26DFF0} = {4D1DBBAB-B952-4D20-8747-B6BD588F5BEA}
+		{A42A2F1F-D69D-4566-9E27-5FC3A4686A3A} = {4D1DBBAB-B952-4D20-8747-B6BD588F5BEA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A03E2701-DDEF-4F5F-9F6B-E0FFC6D09933}

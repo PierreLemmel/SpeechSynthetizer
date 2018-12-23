@@ -1,4 +1,4 @@
-﻿namespace Troikatorz.Speech.Builders
+﻿namespace Troikatorz.Speech
 {
     public abstract class Builder<T>
     {
