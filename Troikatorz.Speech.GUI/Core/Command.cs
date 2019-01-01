@@ -15,7 +15,7 @@ namespace Troikatorz.Speech.GUI
             executeDelegate = obj => execute((T)obj);
 
             if (when != null)
-                whenDelegate = obj => whenDelegate((T)obj);
+                whenDelegate = obj => when((T)obj);
             else
                 whenDelegate = obj => true;
         }

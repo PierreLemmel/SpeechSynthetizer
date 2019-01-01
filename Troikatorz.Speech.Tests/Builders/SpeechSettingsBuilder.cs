@@ -1,4 +1,6 @@
-﻿using Troikatorz.Speech.Settings;
+﻿using AutoFixture;
+using AutoFixture.Kernel;
+using Troikatorz.Speech.Settings;
 
 namespace Troikatorz.Speech.Builders
 {

@@ -3,14 +3,14 @@ using System.ComponentModel;
 
 namespace Troikatorz.Speech.GUI
 {
-    internal class ViewModel<TModel> : INotifyPropertyChanged
+    public class ViewModelBase<TModel> : INotifyPropertyChanged
         where TModel : class
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected TModel Model { get; }
 
-        public ViewModel(TModel model)
+        public ViewModelBase(TModel model)
         {
             Model = model ?? throw new ArgumentNullException(nameof(model));
         }
