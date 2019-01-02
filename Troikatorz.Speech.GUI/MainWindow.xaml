@@ -3,10 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Troikatorz.Speech.GUI"
+        xmlns:tkt="clr-namespace:Troikatorz.Speech.GUI.UserControls"
         mc:Ignorable="d"
         Title="SoundBox" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    
+    <ScrollViewer VerticalScrollBarVisibility="Hidden">
+        <tkt:SpeechesListView Margin="6">
+
+        </tkt:SpeechesListView>
+    </ScrollViewer>
 </Window>

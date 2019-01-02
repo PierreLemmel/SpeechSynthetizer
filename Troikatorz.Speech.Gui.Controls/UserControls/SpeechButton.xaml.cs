@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Troikatorz.Speech.GUI.UserControls
 {
     /// <summary>
-    /// Interaction logic for SoundButton.xaml
+    /// Interaction logic for SpeechButton.xaml
     /// </summary>
-    public partial class SoundButton : UserControl
+    public partial class SpeechButton : UserControl
     {
-        public SoundButton()
+        public SpeechButton()
         {
             InitializeComponent();
         }

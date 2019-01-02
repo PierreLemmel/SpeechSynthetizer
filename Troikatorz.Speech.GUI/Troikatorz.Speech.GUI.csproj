@@ -38,6 +38,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -61,20 +63,36 @@
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\SoundButton.xaml.cs">
-      <DependentUpon>SoundButton.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Core\ViewModelBase.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="UserControls\AutosizeWrapPanel.cs" />
+    <Compile Include="UserControls\SpeechButton.xaml.cs">
+      <DependentUpon>SpeechButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SpeechesListView.xaml.cs">
+      <DependentUpon>SpeechesListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\AppViewModel.cs" />
     <Compile Include="ViewModel\SpeechViewModel.cs" />
+    <Compile Include="Windows\CreateSpeechWindow.xaml.cs">
+      <DependentUpon>CreateSpeechWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UserControl\SoundButton.xaml">
+    <Page Include="UserControls\SpeechButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\SpeechesListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CreateSpeechWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -108,11 +126,16 @@
   <ItemGroup>
     <Folder Include="Command\" />
     <Folder Include="Page\" />
+    <Folder Include="Themes\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Troikatorz.Speech.Data\Troikatorz.Speech.Data.csproj">
       <Project>{3F4626E1-28E4-4C1E-85C3-FD60ED9236BE}</Project>
       <Name>Troikatorz.Speech.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Troikatorz.Speech\Troikatorz.Speech.Core.csproj">
+      <Project>{dbdd4b0e-e90b-4f6c-9086-d55c8b918393}</Project>
+      <Name>Troikatorz.Speech.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

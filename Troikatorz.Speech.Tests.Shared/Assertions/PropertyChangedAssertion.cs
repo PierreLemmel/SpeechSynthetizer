@@ -57,6 +57,8 @@ namespace Troikatorz.Speech.Tests.Assertions
                     string errorMsg = PropertyChangedRaisedWithWrongName(property, e.PropertyName);
                     throw new PropertyChangedException(errorMsg);
                 }
+
+                raised = true;
             }
         }
 

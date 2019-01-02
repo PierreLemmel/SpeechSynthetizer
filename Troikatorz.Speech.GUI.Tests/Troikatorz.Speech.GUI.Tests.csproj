@@ -74,7 +74,6 @@
     <Compile Include="Builders\ExampleViewModelBuilder.cs" />
     <Compile Include="Tests\CommandFacts.cs" />
     <Compile Include="SampleClasses\ExampleViewModel.cs" />
-    <Compile Include="Tests\SpeechViewModelShould.cs" />
     <Compile Include="Tests\ViewModelFacts.cs" />
   </ItemGroup>
   <ItemGroup>

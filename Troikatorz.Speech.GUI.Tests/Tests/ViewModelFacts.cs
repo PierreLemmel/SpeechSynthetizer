@@ -8,8 +8,8 @@ using Xunit;
 namespace Troikatorz.Speech.GUI.Tests
 {
     public abstract class ViewModelFacts<TViewModel, TModel>
-        where TViewModel : ViewModelBase<TModel>
-        where TModel : class
+        where TViewModel : ViewModelBase<TModel>, new()
+        where TModel : class, new()
     {
         private readonly IFixture fixture;
         private readonly PropertyChangedAssertion propAssertion;

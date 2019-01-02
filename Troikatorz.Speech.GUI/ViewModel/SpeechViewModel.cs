@@ -1,14 +1,40 @@
-﻿using Troikatorz.Speech.Data.Model;
+﻿using System.ComponentModel;
+using Troikatorz.Speech.Data.Model;
 
 namespace Troikatorz.Speech.GUI.ViewModel
 {
-    internal class SpeechViewModel : ViewModelBase<SpeechModel>
+    public class SpeechViewModel : ViewModelBase<SpeechModel>
     {
-        public SpeechViewModel(SpeechModel model) : base(model)
+        public SpeechViewModel()
         {
+
         }
 
-        public string Title { get; set; }
-        public string Text { get; set; }
+        public string Title
+        {
+            get { return Model.Title; }
+            set
+            {
+                if (value != Title)
+                {
+                    Model.Title = value;
+                    RaisesPropertyChanged(nameof(Title));
+                }
+            }
+        }
+
+        public string Text
+        {
+            get { return Model.Text; }
+            set
+            {
+                if (value != Text)
+                {
+                    Model.Text = value;
+                    RaisesPropertyChanged(nameof(Text));
+                }
+            }
+        }
+
     }
 }

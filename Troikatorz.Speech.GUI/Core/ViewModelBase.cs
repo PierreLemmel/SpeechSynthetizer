@@ -4,15 +4,15 @@ using System.ComponentModel;
 namespace Troikatorz.Speech.GUI
 {
     public class ViewModelBase<TModel> : INotifyPropertyChanged
-        where TModel : class
+        where TModel : class, new()
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected TModel Model { get; }
 
-        public ViewModelBase(TModel model)
+        public ViewModelBase()
         {
-            Model = model ?? throw new ArgumentNullException(nameof(model));
+            Model = new TModel();
         }
 
         protected void RaisesPropertyChanged(string propertyName)
