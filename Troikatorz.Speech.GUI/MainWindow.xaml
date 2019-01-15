@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="SoundBox" Height="450" Width="800">
     
-    <ScrollViewer VerticalScrollBarVisibility="Hidden">
-        <tkt:SpeechesListView Margin="6">
+    <!--<ScrollViewer>-->
+    <tkt:SpeechesListView Margin="6">
 
-        </tkt:SpeechesListView>
-    </ScrollViewer>
+    </tkt:SpeechesListView>
+    <!--</ScrollViewer>-->
 </Window>

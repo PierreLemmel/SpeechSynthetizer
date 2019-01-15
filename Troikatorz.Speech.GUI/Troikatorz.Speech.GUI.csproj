@@ -68,10 +68,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Selectors\SpeechListViewSelector.cs" />
     <Compile Include="UserControls\AutosizeWrapPanel.cs" />
-    <Compile Include="UserControls\SpeechButton.xaml.cs">
-      <DependentUpon>SpeechButton.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\SpeechesListView.xaml.cs">
       <DependentUpon>SpeechesListView.xaml</DependentUpon>
     </Compile>
@@ -80,11 +78,11 @@
     <Compile Include="Windows\CreateSpeechWindow.xaml.cs">
       <DependentUpon>CreateSpeechWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Images\Images.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\SpeechButton.xaml">
+    <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -137,6 +135,9 @@
       <Project>{dbdd4b0e-e90b-4f6c-9086-d55c8b918393}</Project>
       <Name>Troikatorz.Speech.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Icons\plus_black_512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Windows.Input;
 
 namespace Troikatorz.Speech.GUI.ViewModel
@@ -30,7 +31,7 @@ namespace Troikatorz.Speech.GUI.ViewModel
         public ObservableCollection<SpeechViewModel> Speeches { get; }
 
         public ICommand AddSpeech => new Command<SpeechViewModel>(
-            speech =>/* Speeches.Add(speech)*/System.Console.WriteLine("Hello"),
+            speech =>/* Speeches.Add(speech)*/Debug.WriteLine("Hello"),
             speech => !string.IsNullOrEmpty(speech?.Title));
     }
 }

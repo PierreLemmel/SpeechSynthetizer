@@ -1,15 +1,9 @@
-﻿using System.ComponentModel;
-using Troikatorz.Speech.Data.Model;
+﻿using Troikatorz.Speech.Data.Model;
 
 namespace Troikatorz.Speech.GUI.ViewModel
 {
     public class SpeechViewModel : ViewModelBase<SpeechModel>
     {
-        public SpeechViewModel()
-        {
-
-        }
-
         public string Title
         {
             get { return Model.Title; }

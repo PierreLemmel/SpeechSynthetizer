@@ -5,25 +5,48 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:tkt="clr-namespace:Troikatorz.Speech.GUI.UserControls"
              xmlns:vm="clr-namespace:Troikatorz.Speech.GUI.ViewModel"
+             xmlns:sel="clr-namespace:Troikatorz.Speech.GUI.Selectors"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"
              d:DataContext="{d:DesignInstance vm:AppViewModel, IsDesignTimeCreatable=True}">
-    
-    <ItemsControl ItemsSource="{Binding Speeches}">
+    <UserControl.Resources>
+        <CollectionViewSource x:Key="SpeechesData" Source="{Binding Speeches}"/>
+
+        <Style TargetType="Button" x:Key="SquareBtn">
+            <Setter Property="MinWidth" Value="{Binding ActualHeight, RelativeSource={RelativeSource Self}}" />
+            <Setter Property="MinHeight" Value="{Binding ActualWidth, RelativeSource={RelativeSource Self}}" />
+        </Style>
+
+        <DataTemplate x:Key="SpeechBtnTemplate">
+            <Button Style="{StaticResource SquareBtn}" DataContext="{Binding Path=.}">
+                Hello
+            </Button>
+        </DataTemplate>
+
+        <DataTemplate x:Key="AppBtnTemplate">
+            <Button Style="{StaticResource SquareBtn}">
+                aOu, tcha tcha tcha
+            </Button>
+        </DataTemplate>
+
+        <sel:SpeechListViewSelector x:Key="DataTemplateSelector"
+                                        SpeechDataTemplate="{StaticResource SpeechBtnTemplate}"
+                                        AppDataTemplate="{StaticResource AppBtnTemplate}" />
+    </UserControl.Resources>
+    <ItemsControl ItemTemplateSelector="{StaticResource DataTemplateSelector}">
+
+        <ItemsControl.ItemsSource>
+            <CompositeCollection>
+                <CollectionContainer Collection="{Binding Source={StaticResource SpeechesData}}"/>
+            </CompositeCollection>
+        </ItemsControl.ItemsSource>
+
         <ItemsControl.ItemsPanel>
             <ItemsPanelTemplate>
                 <tkt:AutosizeWrapPanel ChildMinWidth="120" />
             </ItemsPanelTemplate>
         </ItemsControl.ItemsPanel>
-
-        <ItemsControl.ItemTemplate>
-            <DataTemplate>
-                <tkt:SpeechButton DataContext="{Binding Path=.}">
-
-                </tkt:SpeechButton>
-            </DataTemplate>
-        </ItemsControl.ItemTemplate>
+        
     </ItemsControl>
-
 
 </UserControl>
