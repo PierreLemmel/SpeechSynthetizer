@@ -6,10 +6,19 @@
         xmlns:tkt="clr-namespace:Troikatorz.Speech.GUI.UserControls"
         mc:Ignorable="d"
         Title="SoundBox" Height="450" Width="800">
-    
-    <!--<ScrollViewer>-->
-    <tkt:SpeechesListView Margin="6">
+    <Grid>
+        <Grid.RowDefinitions>
 
-    </tkt:SpeechesListView>
-    <!--</ScrollViewer>-->
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+
+        <ScrollViewer>
+            <tkt:SpeechesListView Margin="6">
+
+            </tkt:SpeechesListView>
+        </ScrollViewer>
+        <tkt:SpeechDetailLayout Grid.Row="1" />
+    </Grid>
 </Window>

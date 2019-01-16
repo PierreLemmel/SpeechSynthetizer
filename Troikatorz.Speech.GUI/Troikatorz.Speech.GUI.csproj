@@ -68,16 +68,15 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Selectors\SpeechListViewSelector.cs" />
     <Compile Include="UserControls\AutosizeWrapPanel.cs" />
+    <Compile Include="UserControls\SpeechDetailLayout.xaml.cs">
+      <DependentUpon>SpeechDetailLayout.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\SpeechesListView.xaml.cs">
       <DependentUpon>SpeechesListView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\AppViewModel.cs" />
     <Compile Include="ViewModel\SpeechViewModel.cs" />
-    <Compile Include="Windows\CreateSpeechWindow.xaml.cs">
-      <DependentUpon>CreateSpeechWindow.xaml</DependentUpon>
-    </Compile>
     <Page Include="Images\Images.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -86,11 +85,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UserControls\SpeechesListView.xaml">
+    <Page Include="UserControls\SpeechDetailLayout.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\CreateSpeechWindow.xaml">
+    <Page Include="UserControls\SpeechesListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -124,6 +123,7 @@
   <ItemGroup>
     <Folder Include="Command\" />
     <Folder Include="Page\" />
+    <Folder Include="Selectors\" />
     <Folder Include="Themes\" />
   </ItemGroup>
   <ItemGroup>

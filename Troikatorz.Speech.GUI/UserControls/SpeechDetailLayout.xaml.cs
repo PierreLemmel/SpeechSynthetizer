@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Troikatorz.Speech.GUI.Windows
+namespace Troikatorz.Speech.GUI.UserControls
 {
     /// <summary>
-    /// Interaction logic for CreateSpeechWindow.xaml
+    /// Interaction logic for SpeechDetailLayout.xaml
     /// </summary>
-    public partial class CreateSpeechWindow : Window
+    public partial class SpeechDetailLayout : UserControl
     {
-        public CreateSpeechWindow()
+        public SpeechDetailLayout()
         {
             InitializeComponent();
         }
